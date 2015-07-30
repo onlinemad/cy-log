@@ -2,9 +2,9 @@
   "name": "cy-log",
   "version": "1.0.0",
   "authors": [
-    "Anonymous <anonymous@example.com>"
+    "Ian Wu <onlinemad@gmail.com>"
   ],
-  "description": "An element providing a solution to no problem in particular.",
+  "description": "A Log Web Component for Polymer.",
   "keywords": [
     "web-component",
     "web-components",
@@ -12,8 +12,8 @@
     "seed"
   ],
   "main": "cy-log.html",
-  "license": "http://polymer.github.io/LICENSE.txt",
-  "homepage": "https://github.com/<USERNAME>/cy-log/",
+  "license": "https://raw.githubusercontent.com/onlinemad/cy-log/master/LICENSE",
+  "homepage": "https://github.com/onlinemad/cy-log",
   "ignore": [
     "/.*",
     "/test/",
