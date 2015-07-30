@@ -1,0 +1,62 @@
+<link rel="import" href="../polymer/polymer.html">
+<!--
+A log element with log function for append log.
+
+Example:
+
+    <seed-element></seed-element>
+
+@demo
+-->
+<dom-module id="cy-log">
+  <template>
+    <div id="cy-log-container">
+      <template is="dom-repeat" items="{{logs}}">
+        <p>{{item}}</p>
+      </template>
+    </div>
+  </template>
+</dom-module>
+
+<script>
+
+  Polymer({
+    is: 'cy-log',
+    properties: {
+      /**
+       * How many log show in element
+       *
+       */
+      length: {
+        type: Number,
+        value: 10
+      },
+      /**
+       * Log storage
+       *
+       */
+      logs: {
+        type: Array,
+        value: []
+      }
+    },
+    /**
+     * Append log into element.
+     *
+     * @param {string} log text.
+     */
+    log: function(log) {
+      this.logs.push(log);
+      this._refresh();
+    },
+    _refresh: function() {
+      var tmp = [];
+      for (var i = 0; i < this.length; i++) {
+        if(this.logs[i]) tmp.push(this.logs[i]);
+      }
+      if(this.logs.length >= this.length) tmp.shift();
+      this.logs = tmp;
+    },
+  });
+
+</script>
